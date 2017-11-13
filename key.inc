@@ -158,7 +158,7 @@
     texture { 
          pigment{
          color rgb< 1.0, 0.0, 0.0>  
-            //image_map { png "gymCard.png"
+            //image_map { jpeg "gymCard.jpg"
             //map_type 0  
             //interpolate 2  
             //once 
@@ -172,7 +172,7 @@
     texture { 
          pigment{
          color rgb< 1.0, 0.0, 0.0>  
-            //image_map { png "cex.png"
+            //image_map { jpeg "cex.jpg"
             //map_type 0  
             //interpolate 2  
             //once 

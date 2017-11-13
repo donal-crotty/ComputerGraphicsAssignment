@@ -1,0 +1,83 @@
+#include "colors.inc"
+#include "metals.inc"
+#include "woods.inc"
+#include "textures.inc"
+#include "glass.inc"
+#include "stones.inc"
+#include "shapes.inc"
+#include "shapes2.inc"
+#include "functions.inc"
+#include "math.inc"
+#include "transforms.inc" 
+#include "golds.inc"
+#include "shapes3.inc"
+#include "key.inc"
+#include "coins.inc"       
+
+camera {
+//   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
+   location<0,9,-5>
+   look_at <0,0,0>
+}
+light_source {< 5, 30, 26> color White}  
+          
+//**********HOME BUTTON************
+#declare homeButton = disc{ <0,0,0>, <0,1,0>, 0.250, 0.215
+      texture{
+        pigment{ color Gray10 *5.0 }
+        normal { bumps 0.5 scale 0.025}
+        finish { phong 1}
+             } // end of texture
+       scale <1,1,1>
+       rotate <0,0,0>
+       translate <0.50,1.710,-1.45>
+     }
+          
+          
+//*********PHONE SCREEN************            
+#declare phoneScreen =  box{ <1.75,1.7,2.25> <-2.25,1.4,-2.75> 
+    texture { 
+         pigment{
+         color Black      
+         }  
+    }
+             scale<-0.875,-0.1,-0.755> translate<0.275,1.85,0.5> 
+}   
+   
+   
+//*********PHONE BODY**************   
+#declare phoneBody =  object{
+    Round_Box( <1.75,1.7,2.25> <-2.25,1.4,-2.75>, 0.125, 0) 
+    texture { 
+         pigment{
+         color White  
+         }  
+    }
+    scale<0,0,0> translate<0.75,0,1>  
+}     
+
+
+//********PHONE COVER**************
+#declare phoneCover = object {
+ // Wire_Box(A, B, WireRadius, Merge)
+ Wire_Box(<1.95,1.7,2.60>,<-2.55,1.4,-3.0>, 0.165, 0)
+ texture{
+   pigment{ color Black}               
+   
+   //finish {  phong 1}
+ } // end of texture
+ scale<0,0,0>
+ rotate<0,0,0>
+ translate<0.75,0.015,1.05>
+} //------          
+
+
+//******UNION OF PHONE OBJECTS*****
+#declare phone = union{
+     
+    object{homeButton}
+    object{phoneScreen}
+    object{phoneBody} 
+    object{phoneCover}
+}      
+

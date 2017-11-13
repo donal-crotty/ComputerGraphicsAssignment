@@ -154,5 +154,30 @@
         scale <1,1,1> rotate<0,0,0> translate<0,0.05,0>
       } // end of torus  -------------------------------
       
+#declare gymLabel =  box{ <1.75,1.7,2.25> <-2.25,1.4,-2.75> 
+    texture { 
+         pigment{
+         color rgb< 1.0, 0.0, 0.0>  
+            //image_map { png "gymCard.png"
+            //map_type 0  
+            //interpolate 2  
+            //once 
+            //}
+         }  
+    }
+            scale<0,0,0> translate<0.75,0,0.75> 
+}   
 
-
+#declare cexLabel =  box{ <1.75,1.7,2.25> <-2.25,1.4,-2.75> 
+    texture { 
+         pigment{
+         color rgb< 1.0, 0.0, 0.0>  
+            //image_map { png "cex.png"
+            //map_type 0  
+            //interpolate 2  
+            //once 
+            //}
+         }  
+    }
+            scale<0,0,0> translate<0.75,0,0.75> 
+} 

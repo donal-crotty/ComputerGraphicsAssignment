@@ -13,7 +13,8 @@
 #include "shapes3.inc"
 #include "key.inc"
 #include "coins.inc" 
-#include "highlighter.inc"      
+#include "highlighter.inc"  
+#include "phone.inc"    
 
     
 //=====================================================================
@@ -304,7 +305,9 @@ object{bottle scale <1,1,1> rotate<0,180,0> translate<-0.5,0,0>}
 object{modernKey scale <-0.35,-0.35,0> rotate<85,-90,0> translate<-1,0.2,-4.2>}
 object{silver_key scale <0,0,0> rotate<15,15,0> translate<-2.4,0,-4.5>}
 object{keyRing scale <0,0,0> rotate<155,0,0> translate<-1.95,0.25,-4.4>}
-object{gymLabel scale <-0.50,-0.50,-0.50> rotate<0,0,0> translate<3,4,0>}
+object{gymLabel scale <-0.25,-0.25,-0.25> rotate<15,345,0> translate<-2.25,0.5,-4>}  
+//object{cexLabel scale <-0.25,-0.25,-0.25> rotate<0,270,0> translate<-2,0.50,-4>}  
+object{phone scale <-0.45,0,0> rotate<0,270,0> translate<-0.95,-1.175,-1.95>}
 
 //Start Coins
 object{oneEuro scale <-0.5,0.5,0> rotate<90,0,0> translate<1,0.6,-5.5>}
