@@ -1,47 +1,3 @@
-#include "colors.inc"
-#include "metals.inc"
-#include "woods.inc"
-#include "textures.inc"
-#include "glass.inc"
-#include "stones.inc"
-#include "shapes.inc"
-#include "shapes2.inc"
-#include "functions.inc"
-#include "math.inc"
-#include "transforms.inc" 
-#include "golds.inc"
-#include "shapes3.inc"
-#include "key.inc"
-#include "coins.inc" 
-#include "highlighter.inc"  
-#include "phone.inc"    
-
-    
-//=====================================================================
-//                              Camera & Light Source
-//===================================================================== 
-camera {
-//   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
-   location<3,4,-9>
-   look_at <0,0,0>
-}
-light_source {<-50, 50, -30> color White}
-
-
-//=====================================================================
-//                      Horizontal Plane
-//=====================================================================                    
-                                                            
-/* Horizontal Plane */
-plane{ <0,1,0>, -0.012  // tiling pattern in the xz plane  
-
-                texture{ T_Wood12    
-                finish { phong 2 } 
-                rotate<0,0,0> scale 3 translate<0,0,0>
-              } // end of texture 
-
-
-  }
   
 //=====================================================================
 //                      Water Bottle
@@ -71,7 +27,7 @@ lathe{
 	<0.00,0.00>,	
 	<0.00,0.00>
         texture{ 
-            pigment{ color Black *5.0 }
+            pigment{ color Black }
             finish { phong 1 diffuse 0.1 ambient 0.6 specular 1}
            }
                
@@ -86,11 +42,11 @@ lathe{
            }  */
            
             
-  scale 4      
-}
+            scale 4      
+	     }
 	     
-//rubber grip    
-lathe{
+	//rubber grip    
+	lathe{
 	cubic_spline 19,	
 	<0.00,0.00>,	
 	<0.00,0.00>,	
@@ -226,12 +182,11 @@ object{ Round_Conic_Torus( 0.31, // >0, vertical center distance of the upper an
                            0.04, // border radius, // max. = min(lower radius, upper radius)
                            0 // Merge_On
                          ) // ------------------------------------------------  
-   texture{ 
-    pigment{ color Blue}
-    finish { phong 1}
-   } // end of texture
-   scale<0,0,0>  rotate<25,0,0>  translate<0,4.62,-0.4>
-}  // end of object ---------------------------------------------------
+         texture{ pigment{ color Blue}
+                  finish { phong 1}
+                } // end of texture
+          scale<0,0,0>  rotate<25,0,0>  translate<0,4.62,-0.4>
+       }  // end of object ---------------------------------------------------
 //---------------------------------------------------------------------------- 
 
 
@@ -294,7 +249,7 @@ cylinder { <-0.1,0,0>,<0.1,0,0>, 0.10
 
 
  
-}//end bottle object and its unions
+}//end bottle object and its unions   
 
 //---------- Bottle Logo --------------------
 
@@ -310,25 +265,3 @@ cylinder { <-0.1,0,0>,<0.1,0,0>, 0.10
               } // end of texture
       //scale <1,0.75,1> //rotate<0,180,0> //translate<0,-0.05,0.302> 
     } // end of box --------------------------------------
-
-//=====================================================================
-//                      Object Declarations
-//===================================================================== 
-object{bottle scale <1,1,1> rotate<0,180,0> translate<-0.5,0,0>}
-object{bottleLogo scale <1.5,0.5,0> rotate<0,0,90> translate<0,0.5,-0.95>}
-
-
-object{modernKey scale <-0.35,-0.35,0> rotate<85,-90,0> translate<-1,0.2,-4.2>}
-object{silver_key scale <0,0,0> rotate<15,15,0> translate<-2.4,0,-4.5>}
-object{keyRing scale <0,0,0> rotate<155,0,0> translate<-1.95,0.25,-4.4>}
-object{gymLabel scale <-0.25,-0.25,-0.25> rotate<15,345,0> translate<-2.25,0.5,-4>}  
-//object{cexLabel scale <-0.25,-0.25,-0.25> rotate<0,270,0> translate<-2,0.50,-4>}  
-object{phone scale <-0.45,0,0> rotate<0,270,0> translate<-0.95,-1.175,-1.95>}
-
-//Start Coins
-object{oneEuro scale <-0.5,0.5,0> rotate<90,0,0> translate<1,0.6,-5.5>}
-object{tenCent scale <-0.5,0.5,0> rotate<90,0,0> translate<1.1,0.4,-5.5>}
-object{tenCent scale <-0.5,0.5,0> rotate<90,5,0> translate<1,0.2,-5.5>}
-object{fiftyCent scale <-0.5,0.5,0> rotate<90,3,0> translate<1.1,0,-5.5>}
-//End coins
-object{highlighter scale <0,0,0> rotate<0,180,0> translate<0,0.35,-3.5>}   

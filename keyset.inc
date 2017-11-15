@@ -1,4 +1,4 @@
-#ifndef (key_debug)
+                                          #ifndef (key_debug)
   #declare key_debug=off;
 #end
 
@@ -108,10 +108,12 @@
                 
         
         } 
-          texture { pigment{ color rgb< 1, 1, 1>*0.5 } //  color Gray50
-           // normal { bumps 0.5 scale 0.05 }
-           finish { phong 1 }
-          } 
+
+	    material {    
+	        texture{ Polished_Chrome
+                   finish { phong 1}
+            }
+	    } 
 }
 
 //silver old key
@@ -154,30 +156,36 @@
         scale <1,1,1> rotate<0,0,0> translate<0,0.05,0>
       } // end of torus  -------------------------------
       
-#declare gymLabel =  box{ <1.75,1.7,2.25> <-2.25,1.4,-2.75> 
-    texture { 
-         pigment{
-         color rgb< 1.0, 0.0, 0.0>  
-            //image_map { jpeg "gymCard.jpg"
-            //map_type 0  
-            //interpolate 2  
-            //once 
-            //}
-         }  
-    }
-            scale<0,0,0> translate<0.75,0,0.75> 
-}   
+//tags
+#declare gymTag = object{ // Round_Box(A, B, WireRadius, UseMerge)
+        Round_Box(<-0.5,0,-1>,<0.2,0,0.5>, 0.01   , 0)  
+         
+        texture{ pigment{ color Navy }
+               //normal { radial sine_wave frequency 30 scale 0.25 }
+                 //finish { phong 1 }
+                } //texture
+        scale<1,1,1>  rotate<0, 0,0> translate<0,0.1,0>
+      } // ---------------------------------------------------------
+      
+#declare cexTag = object{ // Round_Box(A, B, WireRadius, UseMerge)
+        Round_Box(<-0.5,0,-1>,<0.2,0,0.5>, 0.01   , 0)  
+         
+        texture{ pigment{ color White}
+               //normal { radial sine_wave frequency 30 scale 0.25 }
+                 //finish { phong 1 }
+                }
+        scale<1,1,1>  rotate<0, 0,0> translate<0,0.1,0>
+      } // ---------------------------------------------------------
+      
+      
+      
 
-#declare cexLabel =  box{ <1.75,1.7,2.25> <-2.25,1.4,-2.75> 
-    texture { 
-         pigment{
-         color rgb< 1.0, 0.0, 0.0>  
-            //image_map { jpeg "cex.jpg"
-            //map_type 0  
-            //interpolate 2  
-            //once 
-            //}
-         }  
-    }
-            scale<0,0,0> translate<0.75,0,0.75> 
-} 
+
+                               
+                               
+                               //image_map { 
+                                 //           jpeg "logo.jpg"
+                                   //         map_type 0 
+                                           // interpolate 2 
+                                     //       once 
+                                       //   } // image_map

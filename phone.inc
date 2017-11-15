@@ -1,25 +1,47 @@
-#include "colors.inc"
-#include "metals.inc"
-#include "woods.inc"
-#include "textures.inc"
-#include "glass.inc"
-#include "stones.inc"
-#include "shapes.inc"
-#include "shapes2.inc"
-#include "functions.inc"
-#include "math.inc"
-#include "transforms.inc" 
-#include "golds.inc"
-#include "shapes3.inc"
-#include "key.inc"
-#include "coins.inc"       
+//#include "colors.inc"
+//#include "metals.inc"
+//#include "woods.inc"
+//#include "textures.inc"
+//#include "glass.inc"
+//#include "stones.inc"
+//#include "shapes.inc"
+//#include "shapes2.inc"
+//#include "functions.inc"
+//#include "math.inc"
+//#include "transforms.inc" 
+//#include "golds.inc"
+//#include "shapes3.inc"
+//#include "key.inc"
+//#include "coins.inc"       
 
-camera {
+//camera {
 //   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
-   location<0,9,-5>
-   look_at <0,0,0>
-}
-light_source {< 5, 30, 26> color White}  
+//   location<0,9,-5>
+ //  look_at <0,0,0>
+//}
+//light_source {< 5, 30, 26> color White}       
+
+
+//********** SPEAKER **************
+#declare phoneSpeaker = cylinder { <-1,0,0>,<0.5,0,0>, 0.05
+  texture { 
+    pigment { color Black}  
+    finish  { phong 0.5 reflection{ 0.00 metallic 0.00} } 
+  } // end of texture
+ scale <1,1,1> rotate<0,0,0> translate<0.475,1.66,2.85>
+} 
+
+
+//********* FRONT CAMERA **********
+#declare phoneCamera = cylinder { <0,0,0>,<0,0.25,0>, 0.1 
+     texture { 
+        pigment { color Black }
+       // finish  { phong 0.5 reflection{ 0.00 metallic 0.00} } 
+     } // end of texture
+     scale <1,1,1> rotate<0,0,0> translate<1.3,1.475,2.9>
+} 
+ 
+ 
           
 //**********HOME BUTTON************
 #declare homeButton = disc{ <0,0,0>, <0,1,0>, 0.250, 0.215
@@ -30,7 +52,7 @@ light_source {< 5, 30, 26> color White}
              } // end of texture
        scale <1,1,1>
        rotate <0,0,0>
-       translate <0.50,1.710,-1.45>
+       translate <0.50,1.710,-1.425>
      }
           
           
@@ -41,7 +63,7 @@ light_source {< 5, 30, 26> color White}
          color Black      
          }  
     }
-             scale<-0.875,-0.1,-0.755> translate<0.275,1.85,0.5> 
+             scale<-0.805,-0.1,-0.755> translate<0.275,1.85,0.55> 
 }   
    
    
@@ -64,20 +86,30 @@ light_source {< 5, 30, 26> color White}
  texture{
    pigment{ color Black}               
    
-   //finish {  phong 1}
+   finish {  phong 1}
  } // end of texture
- scale<0,0,0>
+ scale<0,1.5,0>
  rotate<0,0,0>
- translate<0.75,0.015,1.05>
+ translate<0.75,-0.85,1.05>
 } //------          
 
-
+#declare phoneChargerPort= cylinder { <-1,0,0>,<0.5,0,0>, 0.1
+  texture { 
+    pigment { color Gray50}  
+    finish  { phong 0.5 reflection{ 0.00 metallic 0.00} } 
+  } // end of texture
+ scale <0.75,1.25,1> rotate<0,0,0> translate<0.95,1.5, -1.855>
+}
+         
+         
 //******UNION OF PHONE OBJECTS*****
-#declare phone = union{
-     
+#declare phone = union{ 
+    object{phoneCamera}
+    object{phoneSpeaker}
     object{homeButton}
     object{phoneScreen}
     object{phoneBody} 
-    object{phoneCover}
+    object{phoneCover} 
+    object{phoneChargerPort}
 }      
 

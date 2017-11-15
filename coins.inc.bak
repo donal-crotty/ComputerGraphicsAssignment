@@ -30,7 +30,7 @@
         
         }
 
-        text {
+        text {                                        #
                 ttf "times.ttf" "E" 0.2, 0 
                 texture { pigment{color Gold *5.0}}
                 scale 0.25
