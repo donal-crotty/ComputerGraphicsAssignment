@@ -21,13 +21,6 @@
 //=====================================================================
 //                              Camera & Light Source
 //===================================================================== 
-//camera {
-//   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
-  // location<3,4,-9>
-   //look_at <0,0,0>
-//}
-//light_source {<-50, 50, -30> color White}
-
 camera {
 //   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
    location<0,9,-10>
@@ -57,8 +50,10 @@ object{bottleLogo scale <1.5,0.5,0> rotate<0,0,90> translate<-0.25,0.5,-0.75>}
 object{modernKey scale <-0.35,-0.35,0> rotate<-85,90,0> translate<-1,0.25,-4.2>}
 object{silver_key scale <0,0,0> rotate<0,15,0> translate<-2.4,0,-4.5>}
 object{keyRing scale <0,0,0> rotate<145,0,0> translate<-1.95,0.25,-4.42>}
-object{gymTag scale<0,0,0> rotate<0,-30,0> translate<-1.2,0.11,-4.5>}
-object{cexTag scale<0,0,0> rotate<0,-20,0> translate<-1.35,0.095,-4.6>}
+//object{gymTag scale<0,0,0> rotate<90,-30,0> translate<-1.2,0.11,-4.5>}
+object{gymTag scale<1.5,1.5,1.5> rotate<90,150,0> translate<-2,0.21,-4.23>}
+//object{cexTag scale<0,0,0> rotate<0,-20,0> translate<-1.35,0.095,-4.6>}  
+object{cexTag scale<1.5,1.5,1.5> rotate<90,165,0> translate<-2.05,0.19,-4.20>}
 
 object{oneEuro scale <-0.5,0.5,0> rotate<90,0,0> translate<1,0.6,-5.5>}
 object{tenCent scale <-0.5,0.5,0> rotate<90,0,0> translate<1.1,0.4,-5.5>}
@@ -67,4 +62,4 @@ object{fiftyCent scale <-0.5,0.5,0> rotate<90,3,0> translate<1.1,0,-5.5>}
 
 object{highlighter scale <0,0,0> rotate<0,180,0> translate<0,0.35,-3.5>}
 object{phone scale <-0.45,0,0> rotate<0,270,0> translate<-0.95,-1.175,-1.95>}
-object{wallet scale<1.5,1.5,1.5> rotate<145,15,0> translate<-2.75,1.5,-5>}  
+object{wallet scale<1.5,1.5,1.5> rotate<165,15,0> translate<-2.75,1,-5>}  

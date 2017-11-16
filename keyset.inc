@@ -156,36 +156,41 @@
         scale <1,1,1> rotate<0,0,0> translate<0,0.05,0>
       } // end of torus  -------------------------------
       
-//tags
+//tags      
 #declare gymTag = object{ // Round_Box(A, B, WireRadius, UseMerge)
-        Round_Box(<-0.5,0,-1>,<0.2,0,0.5>, 0.01   , 0)  
+        Round_Box(<0,0,0>,<1,1,0>, 0.01   , 0)  
          
-        texture{ pigment{ color Navy }
+        texture{ pigment{ 
+             image_map { 
+                         jpeg "gymCard1.jpg"
+                         map_type 0 
+                         interpolate 2 
+                         once 
+                        } // image_map
+        
+         }
                //normal { radial sine_wave frequency 30 scale 0.25 }
-                 //finish { phong 1 }
+                finish { phong 1 }
                 } //texture
-        scale<1,1,1>  rotate<0, 0,0> translate<0,0.1,0>
-      } // ---------------------------------------------------------
+        scale<-0.5,0,0>  
+        rotate<0,0,0> translate<0,0.1,0>
+      } // ---------------------------------------------------------   
+
       
 #declare cexTag = object{ // Round_Box(A, B, WireRadius, UseMerge)
-        Round_Box(<-0.5,0,-1>,<0.2,0,0.5>, 0.01   , 0)  
+       Round_Box(<0,0,0>,<1,1,0>, 0.01   , 0)    
          
-        texture{ pigment{ color White}
+        texture{ pigment{ 
+             image_map { 
+                         jpeg "cexCard.jpg"
+                         map_type 0 
+                         interpolate 2 
+                         once 
+                        } // image_map
+        
+         }
                //normal { radial sine_wave frequency 30 scale 0.25 }
-                 //finish { phong 1 }
-                }
-        scale<1,1,1>  rotate<0, 0,0> translate<0,0.1,0>
-      } // ---------------------------------------------------------
-      
-      
-      
-
-
-                               
-                               
-                               //image_map { 
-                                 //           jpeg "logo.jpg"
-                                   //         map_type 0 
-                                           // interpolate 2 
-                                     //       once 
-                                       //   } // image_map
+                 finish { phong 1 }
+      }
+        scale<-0.5,0,0>  rotate<0, 0,0> translate<0,0.1,0>
+      } // --      

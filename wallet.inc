@@ -55,10 +55,19 @@ object{  Segment_of_CylinderRing( 0.25, // major radius,
                    finish { phong 1}
                   }
                 }
-        scale <1,1,1> rotate<-88.5,0,100> translate<0.05,0.25,0.4>
+        scale <1,1,1> rotate<-88.5,0,100> translate<0.01,0.265,0.4>
       } // end of object
 
 //leather strap metal button
+object { //Round_Cylinder(point A, point B, Radius, EdgeRadius, UseMerge)
+         Round_Cylinder(<0,0,0>, <0,0.30,0>, 0.09 ,       0.05,   0)  
+         
+         texture { T_Copper_1A
+                   //normal { bumps 0.5 scale 0.15} 
+                   finish { phong 1}
+                 } // end of texture 
+         scale<1,1,1>  rotate<0, 0,0> translate<0.05,-0,0.235>
+       } // ---------------------------------------------------------
 
  
 

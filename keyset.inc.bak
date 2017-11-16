@@ -160,13 +160,7 @@
 #declare gymTag = object{ // Round_Box(A, B, WireRadius, UseMerge)
         Round_Box(<-0.5,0,-1>,<0.2,0,0.5>, 0.01   , 0)  
          
-        texture{ pigment{ 
-                    image_map { 
-                               jpeg "gymCard1.jpg"
-                               map_type 0 
-                               // interpolate 2 
-                               once 
-                               } // image_map}
+        texture{ pigment{ color Navy }
                //normal { radial sine_wave frequency 30 scale 0.25 }
                  //finish { phong 1 }
                 } //texture

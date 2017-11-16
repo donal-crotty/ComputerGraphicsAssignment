@@ -1,25 +1,25 @@
-#include "colors.inc"
-#include "metals.inc"
-#include "woods.inc"
-#include "textures.inc"
-#include "glass.inc"
-#include "stones.inc"
-#include "shapes.inc"
-#include "shapes2.inc"
-#include "functions.inc"
-#include "math.inc"
-#include "transforms.inc" 
-#include "golds.inc"
-#include "shapes3.inc"
-#include "key.inc"
-#include "coins.inc"       
+//#include "colors.inc"
+//#include "metals.inc"
+//#include "woods.inc"
+//#include "textures.inc"
+//#include "glass.inc"
+//#include "stones.inc"
+//#include "shapes.inc"
+//#include "shapes2.inc"
+//#include "functions.inc"
+//#include "math.inc"
+//#include "transforms.inc" 
+//#include "golds.inc"
+//#include "shapes3.inc"
+//#include "key.inc"
+//#include "coins.inc"       
 
-camera {
+//camera {
 //   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
-   location<0,9,-5>
-   look_at <0,0,0>
-}
-light_source {< 5, 30, 26> color White}       
+//   location<0,9,-5>
+ //  look_at <0,0,0>
+//}
+//light_source {< 5, 30, 26> color White}       
 
 
 //********** SPEAKER **************
