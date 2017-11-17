@@ -50,7 +50,7 @@
         normal { bumps 0.5 scale 0.025}
         finish { phong 1}
              } // end of texture
-       scale <1,1,1>
+       scale <-0.75,-0.75,-0.75>
        rotate <0,0,0>
        translate <0.50,1.710,-1.425>
      }

@@ -28,7 +28,7 @@ lathe{
 	<0.00,0.00>
         texture{ 
             pigment{ color Black }
-            finish { phong 1 diffuse 0.1 ambient 0.6 specular 1}
+            finish { phong 1 diffuse 0.1 ambient 0.6 specular 1 reflection {0.02}}
            }
                
 //logo               

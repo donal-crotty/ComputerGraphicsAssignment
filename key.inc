@@ -148,9 +148,11 @@
 }     
 
 #declare keyRing = torus { 0.45,0.03 
-        texture { pigment{ color rgb<1.0,1.0,1.0>}
-                  finish { phong 1 reflection 0.00}
-                } // end of texture
+	    material {    
+	        texture{ Polished_Chrome
+                   finish { phong 1}
+            }
+	    } 
         scale <1,1,1> rotate<0,0,0> translate<0,0.05,0>
       } // end of torus  -------------------------------
       

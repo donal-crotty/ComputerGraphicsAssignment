@@ -58,7 +58,8 @@
           
 //*********PHONE SCREEN************            
 #declare phoneScreen =  box{ <1.75,1.7,2.25> <-2.25,1.4,-2.75> 
-    texture { 
+    texture {
+         finish { reflection {0.025}}
          pigment{
          color Black      
          }  
